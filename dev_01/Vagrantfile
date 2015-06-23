@@ -30,7 +30,11 @@ Vagrant.configure(2) do |config|
 
       # Create a private network, which allows host-only access to the machine
       # using a specific IP.
-      # dev_01_config.vm.network "private_network", ip: "192.168.33.10"
+      dev_01_config.vm.network "private_network", ip: "192.168.33.10"
+      
+      #use the following line to make the guest vm accesible to all
+      #hosts in the same LAN
+      #dev_01_config.vm.network :bridged
 
       # Create a public network, which generally matched to bridged network.
       # Bridged networks make the machine appear as another physical device on
@@ -82,6 +86,8 @@ Vagrant.configure(2) do |config|
         chef.add_recipe "apt"
         chef.add_recipe "git"
         chef.add_recipe "vim"
+	chef.add_recipe "nodejs"	
+	#chef.add_recipe "npm"
       end
     end
 end

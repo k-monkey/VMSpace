@@ -75,7 +75,7 @@ Vagrant.configure(2) do |config|
       # documentation for more information about their specific syntax and use.
       config.vm.provision "shell" do |sh|
         sh.inline = "echo Copying settings file into ~/"
-        sh.inline = "cp -f /vagrant/settings/common/* /home/vagrant/"
+        sh.inline = "cp -rf /vagrant/settings/common/. /home/vagrant/"
       end
 
       # config.vm.provision "shell", inline: <<-SHELL

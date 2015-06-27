@@ -1,2 +1,7 @@
-/cookbooks/*
+#ignore everything
+*
+
+#except
+.gitignore
+Vagrantfile
 !/cookbooks/myapp

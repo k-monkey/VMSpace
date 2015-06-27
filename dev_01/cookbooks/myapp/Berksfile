@@ -7,4 +7,6 @@ metadata
 cookbook "apt"
 cookbook "vim"
 cookbook "git"
-
+cookbook 'nodejs', '~> 2.4.0'
+cookbook 'npm', '~> 0.1.2'
+cookbook 'heroku-toolbelt', '~> 0.1.0'

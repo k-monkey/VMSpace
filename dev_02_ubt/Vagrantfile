@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.define :dev_01 do |dev_01_config|
       # Every Vagrant development environment requires a box. You can search for
       # boxes at https://atlas.hashicorp.com/search.
-      dev_01_config.vm.box = "janihur/ubuntu-1404-desktop"
+      dev_01_config.vm.box = "ubuntu_base01"
 
       # Disable automatic box update checking. If you disable this, then
       # boxes will only be checked for updates when the user runs
@@ -31,7 +31,7 @@ Vagrant.configure(2) do |config|
 
       # Create a private network, which allows host-only access to the machine
       # using a specific IP.
-      dev_01_config.vm.network "private_network", ip: "192.168.33.10"
+      dev_01_config.vm.network "private_network", ip: "192.168.33.102"
       
       #use the following line to make the guest vm accesible to all
       #hosts in the same LAN
@@ -88,12 +88,7 @@ Vagrant.configure(2) do |config|
       #
       dev_01_config.vm.provision :chef_solo do |chef|
         chef.cookbooks_path = "cookbooks/myapp"
-        chef.add_recipe "apt"
-        chef.add_recipe "git"
-        chef.add_recipe "vim"
 	#chef.add_recipe "nodejs"	
-	chef.add_recipe "heroku-toolbelt"
-	chef.add_recipe "sublime-text"
 	#chef.add_recipe "storm"
 	#chef.add_recipe "nvm"
       end

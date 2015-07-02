@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.define :dev_01 do |dev_01_config|
       # Every Vagrant development environment requires a box. You can search for
       # boxes at https://atlas.hashicorp.com/search.
-      dev_01_config.vm.box = "ubuntu_base01"
+      dev_01_config.vm.box = "dev02_base"
 
       # Disable automatic box update checking. If you disable this, then
       # boxes will only be checked for updates when the user runs
@@ -75,7 +75,7 @@ Vagrant.configure(2) do |config|
       # documentation for more information about their specific syntax and use.
       config.vm.provision "shell" do |sh|
         sh.inline = "echo Copying settings file into ~/"
-        sh.inline = "cp -rf /vagrant/settings/common/. /home/vagrant/"
+        #sh.inline = "cp -rf /vagrant/settings/common/. /home/vagrant/"
       end
 
       # config.vm.provision "shell", inline: <<-SHELL

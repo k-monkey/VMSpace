@@ -1,0 +1,20 @@
+source "https://supermarket.chef.io"
+
+
+
+metadata
+
+#cookbook "apt"
+cookbook "vim"
+cookbook "git"
+cookbook 'nodejs', '~> 2.4.0'
+cookbook 'npm', '~> 0.1.2'
+cookbook 'heroku-toolbelt', '~> 0.1.0'
+cookbook 'sublime-text', '~> 0.1.1'
+cookbook 'storm', '~> 1.2.5'
+cookbook 'nvm', '~> 0.1.1'
+cookbook 'bjn_java', '~> 2.0.1'
+cookbook 'chef', '~> 0.99.9'
+cookbook 'chef-dk', '~> 3.1.0'
+#cookbook 'nvm_pack', git: "https://github.com/k-monkey/nvm_pack.git"
+#cookbook 'nvm_pack', path: "../nvm_pack" 

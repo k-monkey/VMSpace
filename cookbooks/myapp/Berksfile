@@ -14,7 +14,10 @@ cookbook 'sublime-text', '~> 0.1.1'
 cookbook 'storm', '~> 1.2.5'
 cookbook 'nvm', '~> 0.1.1'
 cookbook 'bjn_java', '~> 2.0.1'
+cookbook 'vagrant', '~> 0.2.2'
 cookbook 'chef', '~> 0.99.9'
 cookbook 'chef-dk', '~> 3.1.0'
+cookbook 'berkshelf', '~> 1.0.0'
+cookbook 'virtualbox', '~> 1.0.3'
 #cookbook 'nvm_pack', git: "https://github.com/k-monkey/nvm_pack.git"
 #cookbook 'nvm_pack', path: "../nvm_pack" 
